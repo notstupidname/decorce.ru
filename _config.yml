@@ -1,0 +1,7 @@
+gems:
+  - jekyll-seo-tag
+  - jekyll-redirect-from
+
+url: https://decorce.ru
+  
+logo: /images/logo.png

@@ -1,0 +1,68 @@
+---
+title: Блог о столешницах - d'ecorce
+description: Блог компании d'ecorce. Столешницы и всё, что с ними связано.
+layout: default
+permalink: /blog/
+---
+<section id="banner_small" style="background-image: url('/images/banner_s_blog.jpg');">
+	<div class="caption">
+		<h1>Блог</h1>
+	</div>
+</section>
+<article id="main">
+
+	<section class="wrapper style4 container">
+		<div class="row 150%">
+			<div class="8u 12u(narrower)">
+				
+					{% for post in site.posts %}
+					<section class="blog-post">
+						
+							<header>
+								<p>{{ post.date | date: "%d/%m/%Y" }}</p>
+								<a href="{{ post.url }}" class="image fit"><img src="{{ post.image }}"/></a>
+								<a href="{{ post.url }}"><h2>{{ post.post_title }}</h2></a>
+								
+							</header>
+							
+							<p>{{ post.desc }}</p>
+							<footer>
+								<ul class="buttons">
+									<li><a href="{{ post.url }}" class="button small">Читать далее</a></li>
+								</ul>
+							</footer>
+						
+					</section>
+					{% endfor %}
+			
+			</div>
+			<div class="4u 12u(narrower)">
+			<!-- Sidebar -->
+				<div class="sidebar">
+					<section>
+						<header>
+							<h3>Последние публикации:</h3>
+						</header>
+						<ul class="default menu" style="text-align:left;">
+							{% for post in site.posts %}
+							<li><a href="{{ post.url }}">{{ post.title }}</a>
+							{% endfor %}
+						</ul>
+					</section>
+					<section>
+						<header>
+							<h3>Подписывайтесь на обновления:</h3>
+						</header>
+						<ul class="icons">
+							<li><a href="https://www.facebook.com/VitroniteByDecorce" class="icon circle fa-facebook" rel="nofollow" target="_blank"><span class="label">Facebook</span></a></li>
+							<li><a href="https://plus.google.com/110011340182038101932/about" class="icon circle fa-google-plus" rel="nofollow" target="_blank"><span class="label">Google+</span></a></li>
+							<li><a href="https://instagram.com/vitronite/" class="icon circle fa-instagram" rel="nofollow" target="_blank"><span class="label">Instagram</span></a></li>
+						</ul>
+					</section>
+				</div>
+			</div>
+		</div>
+		
+	</section>
+	
+</article>

@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+
+<html>
+	{% include head.html %}
+	<body class="right-sidebar">
+		
+		<!-- Header -->
+		{% include header.html %}
+
+		<!-- Main -->
+		<article id="main" style="padding-top:4em">
+			<!-- <header class="special container">
+				<span class="icon fa-book"></span>
+			</header> -->
+			<section class="wrapper style4 container 75%">
+				<section class="blog-post">
+					<header>
+						<p>{{ page.date | date: "%d/%m/%Y" }}</p>
+						<p class="image fit"><img src="{{ page.image }}"/></p>
+						<h2>{{ page.post_title }}</h1>
+					</header>
+					{{ content }}
+				</section>
+			<footer>
+				<h3>Поделиться:</h3>
+				<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+				<script src="//yastatic.net/share2/share.js"></script>
+				<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,gplus"></div>
+				<hr />
+				<ul class="buttons">
+					<li><a href="/blog/" class="button icon small fa-chevron-left">Назад</a></li>
+				</ul>
+			</footer>
+			</section>
+			
+		</article>
+				
+
+		<!-- Footer -->
+		{% include footer.html %}
+		
